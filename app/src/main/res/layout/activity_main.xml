@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Titre et score -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Quiz Images"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score : 0/5"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <!-- Progression -->
+    <ProgressBar
+        android:id="@+id/progress_quiz"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="5"
+        android:progress="0"
+        android:layout_marginTop="15dp" />
+
+    <!-- Numéro de question -->
+    <TextView
+        android:id="@+id/txt_numero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Question 1 sur 5"
+        android:textSize="18sp"
+        android:layout_marginTop="15dp" />
+
+    <!-- Image -->
+    <ImageView
+        android:id="@+id/img_question"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="fitCenter"
+        android:contentDescription="Image de la question" />
+
+    <!-- Question -->
+    <TextView
+        android:id="@+id/txt_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quelle est cette forme ?"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="15dp" />
+
+    <!-- Réponse 1 -->
+    <Button
+        android:id="@+id/btn_choix1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Triangle"
+        android:layout_marginTop="10dp" />
+
+    <!-- Réponse 2 -->
+    <Button
+        android:id="@+id/btn_choix2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cercle" />
+
+    <!-- Réponse 3 -->
+    <Button
+        android:id="@+id/btn_choix3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Carré" />
+
+    <!-- Message de correction -->
+    <TextView
+        android:id="@+id/txt_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="17sp"
+        android:gravity="center"
+        android:layout_marginTop="10dp" />
+
+    <!-- Question suivante -->
+    <Button
+        android:id="@+id/btn_suivant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Question suivante"
+        android:layout_marginTop="10dp" />
+
+    <!-- Résultat final -->
+    <TextView
+        android:id="@+id/txt_resultat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="15dp" />
+
+    <!-- Rejouer -->
+    <Button
+        android:id="@+id/btn_rejouer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rejouer"
+        android:visibility="gone" />
+
+</LinearLayout>
